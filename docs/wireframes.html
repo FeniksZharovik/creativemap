@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreativeMap.id — Wireframes</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: #f4f4f5;
+            color: #18181b;
+            line-height: 1.5;
+        }
+
+        .wrap {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 32px 16px;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        h2 {
+            font-size: 22px;
+            margin: 40px 0 12px;
+            padding-top: 24px;
+            border-top: 1px solid #e4e4e7;
+        }
+
+        h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #52525b;
+            font-weight: 500;
+        }
+
+        .frame {
+            background: white;
+            border: 2px solid #d4d4d8;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 24px;
+        }
+
+        .frame-header {
+            background: #f4f4f5;
+            border-bottom: 1px solid #d4d4d8;
+            padding: 8px 12px;
+            margin: -16px -16px 12px;
+            border-radius: 6px 6px 0 0;
+            font-size: 12px;
+            color: #71717a;
+            font-family: ui-monospace, monospace;
+        }
+
+        .nav {
+            display: flex;
+            gap: 16px;
+            padding: 12px 0;
+            border-bottom: 1px dashed #d4d4d8;
+            margin-bottom: 16px;
+            font-size: 12px;
+            color: #52525b;
+        }
+
+        .nav strong {
+            color: #18181b;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #fef3c7 0%, #ffe4e6 100%);
+            padding: 48px 24px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .hero h4 {
+            font-size: 32px;
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            color: #52525b;
+            max-width: 540px;
+            margin: 0 auto;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        .stat {
+            background: white;
+            border: 1px solid #e4e4e7;
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 11px;
+        }
+
+        .stat-value {
+            font-size: 18px;
+            font-weight: bold;
+            color: #18181b;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+        }
+
+        .card {
+            background: #fafafa;
+            border: 1px dashed #a1a1aa;
+            padding: 12px;
+            border-radius: 4px;
+            font-size: 11px;
+        }
+
+        .card-title {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .placeholder {
+            background: repeating-linear-gradient(45deg, #f4f4f5 0, #f4f4f5 10px, #e4e4e7 10px, #e4e4e7 20px);
+            height: 100px;
+            border-radius: 4px;
+            margin: 8px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #71717a;
+            font-size: 11px;
+        }
+
+        .map-placeholder {
+            background: linear-gradient(135deg, #ddd6fe 0%, #fbcfe8 50%, #fde68a 100%);
+            height: 280px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(0, 0, 0, 0.4);
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .sidebar {
+            background: #f4f4f5;
+            border-right: 1px solid #e4e4e7;
+            padding: 12px;
+            font-size: 11px;
+        }
+
+        .filter-row {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 6px;
+        }
+
+        .filter-row .pill {
+            background: white;
+            border: 1px solid #d4d4d8;
+            padding: 2px 8px;
+            border-radius: 9999px;
+            font-size: 10px;
+        }
+
+        .filter-row .pill.active {
+            background: #18181b;
+            color: white;
+        }
+
+        .layout-with-sidebar {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 0;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 1px 6px;
+            border-radius: 3px;
+            font-size: 9px;
+            font-weight: 600;
+            margin-right: 3px;
+        }
+
+        .badge-rose {
+            background: #fff1f2;
+            color: #be185d;
+        }
+
+        .badge-sky {
+            background: #f0f9ff;
+            color: #0369a1;
+        }
+
+        .badge-emerald {
+            background: #ecfdf5;
+            color: #047857;
+        }
+
+        .badge-amber {
+            background: #fffbeb;
+            color: #b45309;
+        }
+
+        .desc {
+            color: #71717a;
+            font-size: 12px;
+            margin-bottom: 12px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #18181b;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 9999px;
+            font-size: 11px;
+        }
+
+        .button.secondary {
+            background: white;
+            color: #18181b;
+            border: 1px solid #d4d4d8;
+        }
+
+        .form-row {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-bottom: 8px;
+            font-size: 11px;
+        }
+
+        .input {
+            background: white;
+            border: 1px solid #d4d4d8;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            min-height: 24px;
+        }
+
+        .chart-bar {
+            display: flex;
+            align-items: end;
+            gap: 6px;
+            height: 100px;
+            padding: 8px;
+            background: #fafafa;
+            border-radius: 4px;
+        }
+
+        .chart-bar div {
+            background: linear-gradient(to top, #f59e0b, #fbbf24);
+            width: 24px;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+
+        <h1>🎨 CreativeMap.id — Wireframes</h1>
+        <p class="desc">Mockup low-fidelity untuk semua halaman utama. Bukan versi final — hanya untuk komunikasi
+            struktur layout.</p>
+
+        <!-- LANDING -->
+        <h2>1. Landing Page <code style="font-size:11px;color:#888;">/</code></h2>
+        <div class="frame">
+            <div class="frame-header">https://creativemap.id/</div>
+            <div class="nav"><strong>CreativeMap.id</strong> · Peta · Pelaku Kreatif · Dashboard · Belajar · Tentang ·
+                <span style="margin-left:auto">[Daftar]</span></div>
+            <div class="hero">
+                <span class="badge badge-amber">UNESCO IFCD aligned</span>
+                <h4>Memetakan ekosistem industri kreatif Indonesia</h4>
+                <p>Platform open-data untuk pelaku kreatif, NGO, dinas kebudayaan, dan peneliti.</p>
+                <div style="margin-top: 16px;">
+                    <span class="button">Jelajahi Peta</span>
+                    <span class="button secondary">Daftar Sebagai Kreator</span>
+                </div>
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-value">30</div>Pelaku Kreatif
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">10</div>Sektor
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">13</div>Provinsi
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">15</div>Kreator Perempuan
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">9</div>Pemuda
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">5</div>Komunitas Adat
+                    </div>
+                </div>
+            </div>
+            <h3 style="margin-top:24px;">Selaras dengan Prioritas UNESCO IFCD</h3>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-title">Mapping & Data</div>Decision-making tools untuk kebijakan budaya berbasis
+                    data.
+                </div>
+                <div class="card">
+                    <div class="card-title">Capacity Building</div>Modul belajar online untuk kreator daerah.
+                </div>
+                <div class="card">
+                    <div class="card-title">Market Access</div>Akses pasar nasional & internasional.
+                </div>
+                <div class="card">
+                    <div class="card-title">Gender Equality</div>Empowering women creators.
+                </div>
+                <div class="card">
+                    <div class="card-title">Youth & Indigenous</div>Vulnerable groups participation.
+                </div>
+                <div class="card">
+                    <div class="card-title">Digital Environment</div>Cultural industries online.
+                </div>
+            </div>
+        </div>
+
+        <!-- MAP -->
+        <h2>2. Peta Interaktif <code style="font-size:11px;color:#888;">/map</code></h2>
+        <div class="frame">
+            <div class="frame-header">https://creativemap.id/map</div>
+            <h3>Peta Pelaku Kreatif Indonesia</h3>
+            <p class="desc">30 kreator terverifikasi tersebar di seluruh Indonesia. Klik marker untuk detail.</p>
+            <div class="layout-with-sidebar">
+                <div class="sidebar">
+                    <strong style="display:block;margin-bottom:8px;">Filter Sektor</strong>
+                    <div class="filter-row"><span class="pill active">Semua (30)</span></div>
+                    <div class="filter-row"><span class="pill">🟠 Audio-visual (4)</span></div>
+                    <div class="filter-row"><span class="pill">🟡 Desain (4)</span></div>
+                    <div class="filter-row"><span class="pill">🟢 Musik (5)</span></div>
+                    <div class="filter-row"><span class="pill">🔵 Publishing (4)</span></div>
+                    <strong style="display:block;margin:12px 0 8px;">Prioritas IFCD</strong>
+                    <div class="filter-row"><span class="pill">☐ Perempuan</span></div>
+                    <div class="filter-row"><span class="pill">☐ Pemuda (18-30)</span></div>
+                    <div class="filter-row"><span class="pill">☐ Komunitas Adat</span></div>
+                </div>
+                <div class="map-placeholder">[ Peta Indonesia interaktif (Leaflet + OpenStreetMap) — circle markers per
+                    sektor ]</div>
+            </div>
+        </div>
+
+        <!-- CREATORS LIST -->
+        <h2>3. Direktori Pelaku Kreatif <code style="font-size:11px;color:#888;">/creators</code></h2>
+        <div class="frame">
+            <div class="frame-header">https://creativemap.id/creators</div>
+            <h3>Direktori Pelaku Kreatif</h3>
+            <p class="desc">30 kreator ditemukan</p>
+            <div class="card" style="margin-bottom: 12px; background: white;">
+                <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr 80px;gap:6px;">
+                    <input class="input" placeholder="Cari nama..." />
+                    <select class="input" aria-label="Sektor">
+                        <option>Semua sektor</option>
+                    </select>
+                    <select class="input" aria-label="Provinsi">
+                        <option>Semua provinsi</option>
+                    </select>
+                    <select class="input" aria-label="Gender">
+                        <option>Semua gender</option>
+                    </select>
+                    <span class="button" style="text-align:center;">Filter</span>
+                </div>
+                <div style="margin-top: 6px;">☐ Pemuda &nbsp; ☐ Komunitas Adat</div>
+            </div>
+            <div class="grid-3">
+                <div class="card">
+                    <div style="display:flex;justify-content:space-between;align-items:start;">
+                        <div>
+                            <div class="card-title">Sari Dewi Lestari</div>
+                            <div style="color:#888;font-size:10px;">Yogyakarta, DI Yogyakarta</div>
+                        </div>
+                        <span class="badge" style="background:#f4f4f5;color:#18181b;">MUSIK</span>
+                    </div>
+                    <p style="font-size:11px;margin-top:6px;">Komposer gamelan kontemporer yang menggabungkan tradisi
+                        Jawa dengan elektronik.</p>
+                    <div style="margin-top:6px;"><span class="badge badge-rose">Perempuan</span><span
+                            class="badge badge-sky">Pemuda</span></div>
+                </div>
+                <div class="card">
+                    <div style="display:flex;justify-content:space-between;align-items:start;">
+                        <div>
+                            <div class="card-title">Ni Made Ayu Pradnyani</div>
+                            <div style="color:#888;font-size:10px;">Ubud, Bali</div>
+                        </div>
+                        <span class="badge" style="background:#f4f4f5;color:#18181b;">SENI RUPA</span>
+                    </div>
+                    <p style="font-size:11px;margin-top:6px;">Pelukis muda penerus tradisi Kamasan dengan pendekatan
+                        kontemporer.</p>
+                    <div style="margin-top:6px;"><span class="badge badge-rose">Perempuan</span><span
+                            class="badge badge-sky">Pemuda</span><span class="badge badge-emerald">Komunitas Adat</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div style="display:flex;justify-content:space-between;align-items:start;">
+                        <div>
+                            <div class="card-title">Yohanes Lopes</div>
+                            <div style="color:#888;font-size:10px;">Kupang, NTT</div>
+                        </div>
+                        <span class="badge" style="background:#f4f4f5;color:#18181b;">PERFORMING ARTS</span>
+                    </div>
+                    <p style="font-size:11px;margin-top:6px;">Koreografer komunitas tari adat NTT.</p>
+                    <div style="margin-top:6px;"><span class="badge badge-emerald">Komunitas Adat</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DETAIL -->
+        <h2>4. Detail Profil Kreator <code style="font-size:11px;color:#888;">/creators/[slug]</code></h2>
+        <div class="frame">
+            <div class="frame-header">https://creativemap.id/creators/sari-dewi-lestari</div>
+            <a style="font-size:11px;color:#b45309;">← Kembali ke direktori</a>
+            <div style="display:grid;grid-template-columns:120px 1fr;gap:16px;margin-top:12px;">
+                <div>
+                    <div class="placeholder" style="aspect-ratio:1;height:auto;">Foto Profil</div>
+                    <div style="margin-top:8px;font-size:11px;">
+                        <div style="color:#888;">Sektor</div><strong>Musik</strong><br>
+                        <div style="color:#888;margin-top:4px;">Lokasi</div><strong>Yogyakarta</strong>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="font-size:20px;">Sari Dewi Lestari <span class="badge badge-emerald"
+                            style="font-weight:normal;">● Terverifikasi</span></h4>
+                    <div style="margin-top:6px;"><span class="badge badge-rose">Perempuan</span><span
+                            class="badge badge-sky">Pemuda</span><span class="badge"
+                            style="background:#f4f4f5;color:#3f3f46;">Etnis: Jawa</span></div>
+                    <p style="margin-top:12px;font-size:13px;">Komposer gamelan kontemporer yang menggabungkan tradisi
+                        Jawa dengan elektronik. Berasal dari keluarga seniman Yogyakarta, mulai aktif sejak 2017...</p>
+                    <h3 style="margin-top:16px;">Karya</h3>
+                    <div class="grid-3" style="grid-template-columns:repeat(2,1fr);">
+                        <div class="card"><strong>Gending Digital</strong><br><span style="color:#888;">2024</span>
+                        </div>
+                        <div class="card"><strong>Resonansi Wuku</strong><br><span style="color:#888;">2023</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DASHBOARD -->
+        <h2>5. Dashboard Analytics <code style="font-size:11px;color:#888;">/dashboard</code></h2>
+        <div class="frame">
+            <div class="frame-header">https://creativemap.id/dashboard</div>
+            <h3>Dashboard Industri Kreatif</h3>
+            <p class="desc">Visualisasi data sektor kreatif Indonesia.</p>
+            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:12px;">
+                <div class="stat">
+                    <div class="stat-value">30</div>Total Verified
+                </div>
+                <div class="stat" style="background:#fff1f2;">
+                    <div class="stat-value">15 (50%)</div>Perempuan
+                </div>
+                <div class="stat" style="background:#f0f9ff;">
+                    <div class="stat-value">9 (30%)</div>Pemuda
+                </div>
+                <div class="stat" style="background:#ecfdf5;">
+                    <div class="stat-value">5 (17%)</div>Komunitas Adat
+                </div>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+                <div class="card">
+                    <div class="card-title">Distribusi per Sektor (Pie Chart)</div>
+                    <div class="placeholder" style="height:160px;">[ Recharts PieChart — 10 sectors ]</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Top 10 Provinsi (Bar Chart)</div>
+                    <div class="chart-bar">
+                        <div style="height:90%"></div>
+                        <div style="height:75%"></div>
+                        <div style="height:60%"></div>
+                        <div style="height:50%"></div>
+                        <div style="height:40%"></div>
+                        <div style="height:30%"></div>
+                        <div style="height:25%"></div>
+                        <div style="height:20%"></div>
+                        <div style="height:15%"></div>
+                        <div style="height:10%"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="margin-top:12px;">
+                <div class="card-title">Pertumbuhan Pendaftaran (Line Chart, 12 bulan)</div>
+                <div class="placeholder" style="height:120px;">[ Recharts LineChart — monthly registrations ]</div>
+            </div>
+        </div>
+
+        <!-- LEARN -->
+        <h2>6. Modul Belajar <code style="font-size:11px;color:#888;">/learn</code></h2>
+        <div class="frame">
+            <div class="frame-header">https://creativemap.id/learn</div>
+            <h3>Modul Belajar (Capacity Building)</h3>
+            <p class="desc">Capacity building untuk pelaku industri kreatif Indonesia. Fokus pada perempuan & pemuda —
+                selaras prioritas IFCD.</p>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="placeholder" style="height:80px;">[Cover image]</div>
+                    <div style="margin:6px 0;"><span class="badge badge-amber">BEGINNER</span><span
+                            class="badge badge-sky">Pemuda</span></div>
+                    <strong>Digital Marketing untuk Seniman & Kreator</strong>
+                    <p style="font-size:11px;margin-top:4px;color:#52525b;">Belajar membangun audience online dan
+                        menjual karya...</p>
+                    <div style="margin-top:6px;color:#888;font-size:10px;">2 modul · ~4 jam</div>
+                </div>
+                <div class="card">
+                    <div class="placeholder" style="height:80px;">[Cover image]</div>
+                    <div style="margin:6px 0;"><span class="badge badge-amber">BEGINNER</span><span
+                            class="badge badge-rose">Perempuan</span></div>
+                    <strong>Perempuan Kreator: Membangun Bisnis Berkelanjutan</strong>
+                    <p style="font-size:11px;margin-top:4px;color:#52525b;">Modul khusus untuk perempuan kreator...</p>
+                    <div style="margin-top:6px;color:#888;font-size:10px;">2 modul · ~5 jam</div>
+                </div>
+                <div class="card">
+                    <div class="placeholder" style="height:80px;">[Cover image]</div>
+                    <div style="margin:6px 0;"><span class="badge badge-amber">INTERMEDIATE</span></div>
+                    <strong>Hak Cipta & HAKI untuk Pelaku Kreatif</strong>
+                    <p style="font-size:11px;margin-top:4px;color:#52525b;">Pengantar hak cipta, lisensi, dan cara
+                        melindungi karya.</p>
+                    <div style="margin-top:6px;color:#888;font-size:10px;">2 modul · ~3 jam</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- REGISTER -->
+        <h2>7. Form Pendaftaran <code style="font-size:11px;color:#888;">/register</code></h2>
+        <div class="frame" style="max-width:600px;margin:0 auto 24px;">
+            <div class="frame-header">https://creativemap.id/register</div>
+            <h3>Daftar sebagai Kreator</h3>
+            <div class="form-row"><label>Nama lengkap</label><input class="input" placeholder="Budi Santoso" /></div>
+            <div class="form-row"><label>Email</label><input class="input" placeholder="email@example.com" /></div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+                <div class="form-row"><label for="sektor-utama">Sektor utama</label><select id="sektor-utama" class="input">
+                        <option>Pilih sektor...</option>
+                    </select></div>
+                <div class="form-row"><label for="kota">Kota</label><input id="kota" class="input" placeholder="Yogyakarta" /></div>
+            </div>
+            <div class="form-row"><label>Bio singkat</label><textarea class="input" rows="3" placeholder="Ceritakan tentang diri Anda..."></textarea></div>
+            <div style="text-align:center;margin-top:8px;"><span class="button">Daftar</span></div>
+        </div>
+
+        <p style="text-align:center;color:#71717a;font-size:11px;margin-top:32px;">— END —</p>
+
+    </div>
+</body>
+
+</html>
