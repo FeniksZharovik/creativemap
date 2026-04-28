@@ -43,6 +43,9 @@ export async function findSectorBySlug(slug: string): Promise<Sector | null> {
   return row ? rowToSector(row) : null;
 }
  
-export async function countSectors(): Promise<number> {
-  const row = await queryOne<{ count: string }>(`SELECT COUNT(*)::text AS count FROM sector`);
+export async function countSectors() {
+  const row = await queryOne<{ count: string }>(
+    `SELECT COUNT(*)::text AS count FROM sector`
+  );
   return Number(row?.count ?? 0);
+}
