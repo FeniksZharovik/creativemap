@@ -3,7 +3,7 @@
 > **Platform pemetaan & pemberdayaan pelaku industri kreatif Indonesia.**
 > Open data, open source, selaras dengan UNESCO IFCD (International Fund for Cultural Diversity) dan Konvensi 2005.
 
-rototype starter untuk proyek mahasiswa IT yang ingin mengajukan proposal ke UNESCO IFCD atau hibah serupa di sektor industri kreatif dan budaya.
+Prototype starter untuk proyek mahasiswa IT yang ingin mengajukan proposal ke UNESCO IFCD atau hibah serupa di sektor industri kreatif dan budaya.
  
 ---
  
